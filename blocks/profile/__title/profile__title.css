@@ -1,0 +1,16 @@
+.profile__title {
+  display: flex;
+  color: #fff;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .profile__title {
+    font-size: 27px;
+    line-height: 56px;
+    font-weight: 500;
+  }
+}
