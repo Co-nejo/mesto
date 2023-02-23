@@ -6,7 +6,7 @@
   border: 0;
   background-size: cover;
   cursor: pointer;
-  transition: .3s ;
+  transition: .3s;
 }
 .element__button-like:hover {
   opacity: .5;
