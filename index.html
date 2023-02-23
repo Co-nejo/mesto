@@ -5,96 +5,76 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="pages/index.css">
+  <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto</title>
 </head>
 
 <body class="page">
-
-    <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="Лого Mesto">
-
-    </header>
-
-    <main class="content">
+  <header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="Лого Mesto">
+  </header>
+  <main class="content">
     <section class="profile">
-        <img class="profile__avatar" src="./images/jak-iv.svg" alt="Фото профиля">
-        <div class="profile__info">
-          <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="profile__button-edit" type="button"></button>
-          <p class="profile__subtitle">Исследователь океана</p>
-          
+      <img class="profile__avatar" src="./images/jak-iv.svg" alt="Фото профиля">
+      <div class="profile__info">
+        <h1 class="profile__title">Жак-Ив Кусто</h1>
+        <button class="profile__button-edit" type="button"></button>
+        <p class="profile__subtitle">Исследователь океана</p>
+      </div>
+      <button class="profile__button-add" type="button"></button>
+    </section>
+    <section class="elements">
+      <div class="element">
+        <img class="element__image" src="./images/Arkhyz.jpg" alt="Архыз">
+        <div class="element__group">
+          <h2 class="element__title">Архыз</h2>
+          <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
         </div>
-        <button class="profile__button-add" type="button"></button>
-      </section>
-
-      <section class="elements">
-
-        <div class="element">
-          <img class="element__image" src="./images/Arkhyz.jpg" alt="Архыз">
-          <div class="element__group">
-            <h2 class="element__title">Архыз</h2>
-            <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
-          </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Dombay.jpg" alt="Домбай">
+        <div class="element__group">
+          <h2 class="element__title">Домбай</h2>
+          <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
         </div>
-         
-
-          
-          <div class="element">
-            <img class="element__image" src="./images/Dombay.jpg" alt="Домбай">
-            <div class="element__group">
-              <h2 class="element__title">Домбай</h2>
-              <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
-            </div>
-          </div>
-         
-
-         
-          <div class="element">
-            <img class="element__image" src="./images/Elbrus.jpg" alt="Эльбрус">
-            <div class="element__group">
-              <h2 class="element__title">Эльбрус</h2>
-              <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
-            </div>
-          </div>
-          
-
-         
-          <div class="element">
-            <img class="element__image" src="./images/Eltyubyu.jpg" alt="Эльтюбю">
-            <div class="element__group">
-              <h2 class="element__title">Эльтюбю</h2>
-              <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
-            </div>
-          </div>
-          
-
-         
-          <div class="element">
-            <img class="element__image" src="./images/Nalchik.jpg" alt="Нальчик">
-            <div class="element__group">
-              <h2 class="element__title">Нальчик</h2>
-              <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
-            </div>
-          </div>
-          <div class="element">
-            <img class="element__image" src="./images/Tumanly-Kol.jpg" alt="Туманлы-Кёль">
-            <div class="element__group">
-              <h2 class="element__title">Туманлы-Кёль</h2>
-              <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
-            </div>
-          </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p class="footer__copyright"> &copy; 2023 Mesto Russia</p>
-    </footer>
-
-    <div class="popup">
-      <div class="popup__container">
-        <form class="popup__form" name="editForm" id="edit-form">
-          <h2 class="popup__title">Редактировать профиль</h2>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Elbrus.jpg" alt="Эльбрус">
+        <div class="element__group">
+          <h2 class="element__title">Эльбрус</h2>
+          <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Eltyubyu.jpg" alt="Эльтюбю">
+        <div class="element__group">
+          <h2 class="element__title">Эльтюбю</h2>
+          <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Nalchik.jpg" alt="Нальчик">
+        <div class="element__group">
+          <h2 class="element__title">Нальчик</h2>
+          <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Tumanly-Kol.jpg" alt="Туманлы-Кёль">
+        <div class="element__group">
+          <h2 class="element__title">Туманлы-Кёль</h2>
+          <button class="element__button-like" type="button" aria-label="Поставить сердечко"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright"> &copy; 2023 Mesto Russia</p>
+  </footer>
+  <div class="popup">
+    <div class="popup__container">
+      <form class="popup__form" name="editForm" id="edit-form">
+        <h2 class="popup__title">Редактировать профиль</h2>
         <input class="popup__input popup__input_name" type="text" placeholder="Имя" name="name">
         <input class="popup__input popup__input_activity" type="text" placeholder="О себе" name="activity">
         <button class="popup__button-save" type="submit">Сохранить</button>
@@ -105,5 +85,3 @@
   <script src="./scripts/script.js"></script>
 </body>
 </html>
-       
-        

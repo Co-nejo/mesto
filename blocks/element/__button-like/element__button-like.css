@@ -1,5 +1,5 @@
 .element__button-like {
-  background: url(/images/button-like.svg);
+  background: url(./images/button-like.svg);
   background-color: transparent;
   width: 22px;
   height: 19px;
@@ -12,8 +12,8 @@
   opacity: .5;
 }
 .element__button-like:active {
-  background: url(/images/like-active.svg);
+  background: url(./images/like-active.svg);
 }
 .element__button-like:focus {
-  background: url(/images/like-active.svg);
+  background: url(./images/like-active.svg);
 }
