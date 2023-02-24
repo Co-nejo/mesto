@@ -7,7 +7,7 @@
 }
 
 @media (max-width: 767px) {
-  .profile__about {
+  .profile__subtitle {
     text-align: center;
   }
 }
