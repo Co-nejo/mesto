@@ -5,3 +5,10 @@ margin-right: 30px;
 height: 120px;
 width: 120px;
 }
+
+@media (max-width: 767px) {
+  .profile__avatar {
+    margin-right: 0;
+
+  }
+}
