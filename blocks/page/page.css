@@ -2,14 +2,16 @@
   font-family: 'Inter', Arial, sans-serif;
   background-color: black;
   margin: 45px auto 0;
+  max-width: 880px;
   min-width: 320px;
-  max-width: 1280px;
+  position: relative;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+
 }
 @media (max-width: 767px) {
   .page {
