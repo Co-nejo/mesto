@@ -10,6 +10,7 @@
   transition: 0.3s;
   justify-content: center;
   border-radius: 2px;
+  box-sizing: border-box;
 
 }
 
@@ -17,10 +18,9 @@
   opacity: 0.6;
 }
 
-@media screen and (min-width: 320px) and (max-width: 1023px) {
+@media screen and (min-width: 320px) and (max-width: 580px) {
   .profile__button-add {
     width: 282px;
-    height: 50px;
     background-size: 16px 16px;
   }
 }

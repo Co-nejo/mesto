@@ -3,12 +3,14 @@
   background-size: 10px 10px;
   background-repeat: no-repeat;
   background-position: center;
+  box-sizing: border-box;
   width: 24px;
   height: 24px;
   margin-top: 15px;
   border: 1px solid #FFF;
   cursor: pointer;
   transition: .3s;
+
 }
 
 .profile__button-edit:hover {
@@ -17,11 +19,16 @@
 
 @media (max-width: 1023px) {
   .profile__button-edit {
+    margin-top: 7px;
     width: 18px;
     height: 18px;
+  }
+}
+
+@media (max-width: 580px) {
+  .profile__button-edit {
     background-size: 7.5px 7.5px;
     margin-top: 7px;
-
-
+    box-sizing: border-box;
   }
 }

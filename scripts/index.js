@@ -8,7 +8,7 @@ let inputName = editForm.elements["name"]
 let inputActivity = editForm.elements["activity"]
 
 
-function openPopup() { 
+function openPopup() {
   popup.classList.add("popup_opened")
   inputName.value = profileName.textContent;
   inputActivity.value = profileAbout.textContent;
@@ -27,9 +27,10 @@ function closePopup() {
 }
 
 
+
+
 editButton.addEventListener('click', openPopup);
 
 editForm.addEventListener('submit', editNameAbout);
 
 closeEditFormButton.addEventListener('click', closePopup);
-  
