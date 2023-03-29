@@ -7,11 +7,14 @@ let profileAbout = document.querySelector(".profile__subtitle")
 let inputName = editForm.elements["name"]
 let inputActivity = editForm.elements["activity"]
 
-
 function openPopup() {
   popup.classList.add("popup_opened")
   inputName.value = profileName.textContent;
   inputActivity.value = profileAbout.textContent;
+}
+
+function closePopup() {
+  popup.classList.remove("popup_opened")
 }
 
 function editNameAbout(evt) {
@@ -20,14 +23,6 @@ function editNameAbout(evt) {
   profileAbout.textContent = inputActivity.value
   closePopup();
 }
-
-
-function closePopup() {
-  popup.classList.remove("popup_opened")
-}
-
-
-
 
 editButton.addEventListener('click', openPopup);
 

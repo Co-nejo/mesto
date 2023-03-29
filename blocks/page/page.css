@@ -11,11 +11,14 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  padding-left: 19px;
+  padding-right: 19px;
 }
 
 @media (max-width: 767px) {
   .page {
     margin-top: 28px;
     margin-bottom: 36px;
+
    }
 }
