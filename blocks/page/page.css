@@ -1,9 +1,6 @@
 .page {
   font-family: 'Inter', Arial, sans-serif;
   background-color: black;
-  margin: 45px auto 0;
-  max-width: 880px;
-  min-width: 320px;
   position: relative;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -11,14 +8,4 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  padding-left: 19px;
-  padding-right: 19px;
-}
-
-@media (max-width: 767px) {
-  .page {
-    margin-top: 28px;
-    margin-bottom: 36px;
-
-   }
 }

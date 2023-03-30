@@ -5,9 +5,9 @@
   margin-right: auto;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 645px) {
   .profile__info {
     max-width: 282px;
-    margin: 23px 0 36px;
+    margin: 23px 0 33px;
   }
 }
