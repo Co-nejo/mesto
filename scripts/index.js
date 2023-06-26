@@ -1,21 +1,21 @@
-const popup = document.querySelector('.popup');
-const popupEdit = document.querySelector('.popup_edit-profile');
+
+const popupEdit = document.querySelector('.popup_type_edit-profile');
 const editButton = document.querySelector('.profile__button-edit');
 const closeEditFormButton = popupEdit.querySelector('.popup__button-close');
 const profileName = document.querySelector('.profile__title');
 const profileAbout = document.querySelector('.profile__subtitle');
 const inputName = editForm.elements['name'];
 const inputActivity = editForm.elements['activity'];
-const popupForm = document.querySelector('.popup__form');
-const popupAdd = document.querySelector('.popup_add-photo');
+const popupFormEdit = document.querySelector('.popup__form_type_edit');
+const popupAdd = document.querySelector('.popup_type_add-photo');
 const addButton = document.querySelector('.profile__button-add');
 const closeAddFormButton = popupAdd.querySelector('.popup__button-close');
-const popupOpen = document.querySelector('.popup_open-photo');
-const closeOpenPhotoButton = popupOpen.querySelector('.popup__button-close');
+const popupOpenPhoto = document.querySelector('.popup_type_open-photo');
+const closeOpenPhotoButton = popupOpenPhoto.querySelector('.popup__button-close');
 const elementContainer = document.querySelector('.elements');
-const formAddImage = document.querySelector('.popup__form_add-photo')
-const popupPhoto = popupOpen.querySelector('.popup__photo');
-const popupPhotoCaption = popupOpen.querySelector('.popup__caption');
+const formAddImage = document.querySelector('.popup__form_type_add-photo');
+const popupPhoto = popupOpenPhoto.querySelector('.popup__photo');
+const popupPhotoCaption = popupOpenPhoto.querySelector('.popup__caption');
 const inputTitle = document.querySelector('.popup__input_type_title');
 const inputLink = document.querySelector('.popup__input_type_link');
 const initialCards = [{
@@ -78,7 +78,8 @@ const handlePhotoDeleteButtonClick = (evt) => {
 function handlePhotoElementClick(title, imageLink) {
   popupPhoto.src = imageLink;
   popupPhotoCaption.textContent = title;
-  openPopup(popupOpen);
+  popupPhoto.alt = title;
+  openPopup(popupOpenPhoto);
 };
 
 function addPhotoElement(title, imageLink) {
@@ -90,32 +91,52 @@ function addPhotoElement(title, imageLink) {
   const deleteButton = photoElement.querySelector('.element__button-delete');
   titleElement.textContent = title;
   imageElement.src = imageLink;
+  imageElement.alt = title;
   likeButton.addEventListener('click', handlePhotoLikeButtonClick);
   deleteButton.addEventListener('click', handlePhotoDeleteButtonClick);
   imageElement.addEventListener('click', () => handlePhotoElementClick(title, imageLink));
-  elementContainer.prepend(photoElement);
+ return photoElement;
 }
+
 
 function handleAddFormSubmit(evt) {
   evt.preventDefault();
-  addPhotoElement(inputTitle.value, inputLink.value);
+  const photoElement = addPhotoElement(inputTitle.value, inputLink.value);
+  elementContainer.prepend(photoElement);
   evt.target.reset();
   closePopup(popupAdd);
 }
 
-function addCards(array) {
-  array.forEach((item) => {
-    addPhotoElement(item.name, item.link);
-  });
-}
-closeOpenPhotoButton.addEventListener('click', function() {
-  closePopup(popupOpen)
+initialCards.forEach(function(item) {
+  const photoElement = addPhotoElement(item.name, item.link);
+  elementContainer.prepend(photoElement);
 });
+
+
+
+closeOpenPhotoButton.addEventListener('click', function() {
+  closePopup(popupOpenPhoto)
+});
+
+
 editButton.addEventListener('click', handleEditButtonClick);
 closeEditFormButton.addEventListener('click', () => closePopup(popupEdit));
 addButton.addEventListener('click', handleAddButtonClick);
 closeAddFormButton.addEventListener('click', () => closePopup(popupAdd));
-closeOpenPhotoButton.addEventListener('click', () => closePopup(popupOpen));
-popupForm.addEventListener('submit', editNameAbout);
+closeOpenPhotoButton.addEventListener('click', () => closePopup(popupOpenPhoto));
+popupFormEdit.addEventListener('submit', editNameAbout);
 formAddImage.addEventListener('submit', handleAddFormSubmit);
-addCards(initialCards);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
